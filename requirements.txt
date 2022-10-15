@@ -11,5 +11,5 @@ h3==3.7.4
 Pillow==9.2.0
 pytz==2022.4
 sqlparse==0.4.3
-timezonefinder==6.1.3
+
 
