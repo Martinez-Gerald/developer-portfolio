@@ -16,8 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 from devPortfolio import views
+from django.conf import settings
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
+from django.views.static import serve
 
 admin.autodiscover()
 
@@ -25,6 +27,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.cover, name='cover'),
     path('',views.resume, name='resume'),
-    path('',include("devPortfolio.urls"))
+    path('',include("devPortfolio.urls")),
+   
 ]
 urlpatterns += staticfiles_urlpatterns()
