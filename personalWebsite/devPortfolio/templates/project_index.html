@@ -11,7 +11,7 @@
 
 	  gtag('config', 'UA-47692315-56');
 	</script>
-
+	
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
 
@@ -21,15 +21,30 @@
 
 	<link rel="stylesheet" type="text/css" href="{% static 'css/default.css' %}">
 	<link id="theme-style" rel="stylesheet" type="text/css" href="">
+	<style>
+		img{
+			max-width: 100%;
+			max-height: 100%%;
+			display: block;
+		}
+		.box{
+			width: 500px;
+			border: 5px solid black;
+		}
 
+	</style>
     <section class="s1">
 		<div class="main-container">
 			<h3 style="text-align: center;">Some of my past projects</h3>
-
+			<h3 style="text-align: Left;">{{projects.0.title}}</h3>
+			<h4 style="text-align: Left;">{{projects.0.description}}</h4>
+			<div class="box">
+				<img id="Weather-App" src="{% static 'img/WeatherApp.gif' %}">
 			</div>
-
+			<h4 style="text-align: left;">{{projects.0.technology}}</h4>
+			<a style="text-align: left;" href= '{{projects.0.link}}'>Find Here!</a>
 			<p align="center">
-		
+			
 			</p>
 		</div>
 	</section>
@@ -40,8 +55,5 @@
 	<script type="text/javascript" src="{% static 'js/script.js' %}"></script>
 </head>
 <head>
-<h1> project Page Template </h1>
-<body>
-    
 <body>
 {%endblock content%}

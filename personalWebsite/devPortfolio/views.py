@@ -6,15 +6,12 @@ from devPortfolio.models import Project
 def cover(requests):
     return render(requests, 'index.html',{})
 
-def about(requests):
-    return render(requests, 'about.html',{})
-
 def resume(requests):
     return render(requests, 'resume.html',{})
 
 def project_index(requests):
     projects= Project.objects.all() # performs a query 
-    url= str(Project.image).replace('static', "")
+    url= str(Project.image).replace('static', '')
     context = { #dictonary for projects to set information to templates
         'projects': projects, 'url':url
     }

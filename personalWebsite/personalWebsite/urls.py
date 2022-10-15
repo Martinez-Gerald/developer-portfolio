@@ -24,6 +24,7 @@ admin.autodiscover()
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.cover, name='cover'),
+    path('',views.resume, name='resume'),
     path('',include("devPortfolio.urls"))
 ]
 urlpatterns += staticfiles_urlpatterns()

@@ -1,6 +1,50 @@
 {% extends 'main.html' %}
 {% block content %}
 {% include 'navBar.html' %}
-<h1> Resume Page Template </h1>
+{% load static %}
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-47692315-56"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
 
+	  gtag('config', 'UA-47692315-56');
+	</script>
+	
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+
+	<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="{% static 'css/default.css' %}">
+	<link id="theme-style" rel="stylesheet" type="text/css" href="">
+	<style>
+		img{
+			max-width: 100%;
+			max-height: 100%%;
+			display: block;
+		}
+		.box{
+			width: 500px;
+			border: 5px solid black;
+		}
+
+	</style>
+    <section class="s1">
+		<div class="main-container">
+			<h1 style="text-align: center;">Resume</h1>
+            <h1 style="text-align: center;"><embed src="/static/img/GeraldMartinez_resume.pdf" view=fith width="600px" height="800px" /></h1>
+		</div>
+	</section>
+    <script type="text/javascript">
+		let static = "{% static 'css' %}"
+	</script>
+
+	<script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+</head>
+<head>
+<body>
 {%endblock content%}
